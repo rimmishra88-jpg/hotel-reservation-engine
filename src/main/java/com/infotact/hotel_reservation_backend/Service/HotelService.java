@@ -30,4 +30,12 @@ public class HotelService {
     public void deleteHotel(Long id) {
         hotelRepository.deleteById(id);
     }
+
+    public Hotel updateHotel(Long id, Hotel hotel) {
+    hotel.setId(id);
+    return hotelRepository.save(hotel);
+}
+
+
+
 }

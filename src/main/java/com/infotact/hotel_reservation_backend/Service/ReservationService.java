@@ -26,7 +26,7 @@ public class ReservationService {
         return reservationRepository.save(reservation);
     }
 
-    public Reservation updateReservation(Reservation reservation) {
+    public Reservation updateReservation( Long id, Reservation reservation) {
         return reservationRepository.save(reservation);
     }
 

@@ -30,6 +30,11 @@ public class Hotelcontroller {
         return hotelService.saveHotel(hotel);
     }
 
+    @PutMapping("/{id}")
+public Hotel updateHotel(@PathVariable Long id, @RequestBody Hotel hotel) {
+    return hotelService.updateHotel(id, hotel);
+}
+
     @DeleteMapping("/{id}")
     public void deleteHotel(@PathVariable Long id) {
         hotelService.deleteHotel(id);

@@ -33,4 +33,10 @@ public class Roomtypecontroller {
     public void deleteRoomtype(@PathVariable Long id) {
         roomtypeService.deleteRoomtype(id);
     }
+
+    @PutMapping("/{id}")
+public Roomtype updateRoomtype(@PathVariable Long id,
+                               @RequestBody Roomtype roomtype) {
+    return roomtypeService.updateRoomtype(id, roomtype);
+}
 }

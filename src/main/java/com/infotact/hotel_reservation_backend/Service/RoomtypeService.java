@@ -26,13 +26,13 @@ public class RoomtypeService {
         return roomtypeRepository.save(roomtype);
     }
 
-    public Roomtype updateRoomtype(Roomtype roomtype) {
-        return roomtypeRepository.save(roomtype);
-    }
-
-    public void deleteRoomtype(Long id) {
-        roomtypeRepository.deleteById(id);
-    }
+public Roomtype updateRoomtype(Long id, Roomtype roomtype) {
+    roomtype.setId(id);
+    return roomtypeRepository.save(roomtype);
+}
+public void deleteRoomtype(Long id) {
+    roomtypeRepository.deleteById(id);
+}
 }
 
 
